@@ -18,9 +18,6 @@ The road network data is obtained from [TIGER/Line Shapefiles](https://www.censu
 
 ## Codes
 
-=======
-## Codes
-
 An example code is given below, which will be replaced with actual codes from the study.
 ```python
 import pandas as pd
