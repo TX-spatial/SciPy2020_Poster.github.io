@@ -46,7 +46,7 @@ Sample table
 
 #### Maps of the Kimble County
 
-<img src="file:///home/mehmet/Documents/github/TX-spatial.github.io/img/A-Kimble.png" alt="alt text" width="600"/>
+<img src="file:https://github.com/TX-spatial/TX-spatial.github.io/img/A-Kimble.png" alt="alt text" width="600"/>
 
-<img src="file:///home/mehmet/Documents/github/TX-spatial.github.io/img/B-Kimblemulti.png" alt="alt text" width="600"/>
+<img src="file:https://github.com/TX-spatial/TX-spatial.github.io/img/B-Kimblemulti.png" alt="alt text" width="600"/>
 
