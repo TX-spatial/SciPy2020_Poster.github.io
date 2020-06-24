@@ -20,7 +20,13 @@ The road network data is obtained from [TIGER/Line Shapefiles](https://www.censu
 
 Inital Networkx analysis of the road network data of all four counties is summarized in Table 1
 
-'|    |   Unnamed: 0 | County     |   FIPS |   No of linestrings |   Total length |   No_nodes |   No_edges |   Avg_degree |\n|---:|-------------:|:-----------|-------:|--------------------:|---------------:|-----------:|-----------:|-------------:|\n|  0 |            0 | Kimble     |  48267 |                3389 |           2413 |       4285 |       3290 |       1.5356 |\n|  1 |            1 | Menard     |  48327 |                1424 |           1289 |       1853 |       1388 |       1.4981 |\n|  2 |            2 | Schleicher |  48413 |                4079 |           2639 |       4397 |       3989 |       1.8144 |\n|  3 |            3 | Sutton     |  48435 |                6047 |           3265 |       6452 |       5891 |       1.8261 |'
+|    |   Unnamed: 0 | County     |   FIPS |   No of linestrings |   Total length |   No_nodes |   No_edges |   Avg_degree |
+|---:|-------------:|:-----------|-------:|--------------------:|---------------:|-----------:|-----------:|-------------:|
+|  0 |            0 | Kimble     |  48267 |                3389 |           2413 |       4285 |       3290 |       1.5356 |
+|  1 |            1 | Menard     |  48327 |                1424 |           1289 |       1853 |       1388 |       1.4981 |
+|  2 |            2 | Schleicher |  48413 |                4079 |           2639 |       4397 |       3989 |       1.8144 |
+|  3 |            3 | Sutton     |  48435 |                6047 |           3265 |       6452 |       5891 |       1.8261 |
+
 
 
 ## Codes
