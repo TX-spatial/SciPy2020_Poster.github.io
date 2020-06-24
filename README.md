@@ -18,6 +18,7 @@ The road network data is obtained from [TIGER/Line Shapefiles](https://www.censu
 
 ## Codes
 
+
 An example code is given below, which will be replaced with actual codes from the study.
 ```python
 import pandas as pd
@@ -26,7 +27,7 @@ import shapely
 ```
 
 ## Tables
-
+The tables are obtained from pandas dataframes with `df.to_markdown()`{.python} command.
 Sample table
 
 | Row  |    A |    B |
