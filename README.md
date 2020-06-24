@@ -16,6 +16,13 @@ This study is aimed to develop an algorithm entirely in Jupyter notebooks for pr
 
 The road network data is obtained from [TIGER/Line Shapefiles](https://www.census.gov/cgi-bin/geo/shapefiles/index.php?year=2019&layergroup=Roads) for the selected counties of the state of Texas. The data sets can be also fetched directly from the [Census FTP](https://www2.census.gov/geo/tiger/TIGER2019/ROADS/) by using the [county FIPS number](https://tx.postcodebase.com/state_county). If you prefer to fetch multiple county road datasets you may use [census_fetcher.py](https://gist.github.com/flibbertigibbet/8092460) by Kathryn Killebrew. In this study we decided to use TIGER/Line datasets instead of other open source data such as [OpenStreetMap](https://download.geofabrik.de/index.html) due to better rural area coverage provided by the former source. While volunteers work on 
 
+## Analysis
+
+Inital Networkx analysis of the road network data of all four counties is summarized in Table 1
+
+'|    |   Unnamed: 0 | County     |   FIPS |   No of linestrings |   Total length |   No_nodes |   No_edges |   Avg_degree |\n|---:|-------------:|:-----------|-------:|--------------------:|---------------:|-----------:|-----------:|-------------:|\n|  0 |            0 | Kimble     |  48267 |                3389 |           2413 |       4285 |       3290 |       1.5356 |\n|  1 |            1 | Menard     |  48327 |                1424 |           1289 |       1853 |       1388 |       1.4981 |\n|  2 |            2 | Schleicher |  48413 |                4079 |           2639 |       4397 |       3989 |       1.8144 |\n|  3 |            3 | Sutton     |  48435 |                6047 |           3265 |       6452 |       5891 |       1.8261 |'
+
+
 ## Codes
 
 
