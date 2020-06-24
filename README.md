@@ -14,7 +14,7 @@ This study is aimed to develop an algorithm entirely in Jupyter notebooks for pr
 
 ## Data
 
-The road network data is obtained from [TIGER/Line Shapefiles](https://www.census.gov/cgi-bin/geo/shapefiles/index.php?year=2019&layergroup=Roads) for the selected counties of the state of Texas. In this study we decided to use TIGER/Line datasets instead of other open source data such as [OpenStreetMap](https://download.geofabrik.de/index.html) due to better rural area coverage provided by the former source. While volunteers work on 
+The road network data is obtained from [TIGER/Line Shapefiles](https://www.census.gov/cgi-bin/geo/shapefiles/index.php?year=2019&layergroup=Roads) for the selected counties of the state of Texas. The data sets can be also fetched directly from the [Census FTP](https://www2.census.gov/geo/tiger/TIGER2019/ROADS/) by using the [county FIPS number](https://tx.postcodebase.com/state_county). In this study we decided to use TIGER/Line datasets instead of other open source data such as [OpenStreetMap](https://download.geofabrik.de/index.html) due to better rural area coverage provided by the former source. While volunteers work on 
 
 ## Codes
 
