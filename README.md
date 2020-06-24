@@ -27,7 +27,8 @@ import shapely
 ```
 
 ## Tables
-The tables are obtained from pandas dataframes with `df.to_markdown()`{.python} command.
+The tables are obtained from pandas dataframes with `df.to_markdown()`{:.python} command.
+
 Sample table
 
 | Row  |    A |    B |
