@@ -3,7 +3,7 @@ This is a repository for purposes of presenting the SciPy2020 Poster at [SciPy20
 
 
 ## Contents of the Presentation
-* [Summary]
+
 
 
 ## Summary
@@ -26,6 +26,14 @@ Inital Networkx analysis of the road network data of all four counties is summar
 |  1 |  48327 | Menard     |       1853 |       1388 |       1.4981 |
 |  2 |  48413 | Schleicher |       4397 |       3989 |       1.8144 |
 |  3 |  48435 | Sutton     |       6452 |       5891 |       1.8261 |
+
+The graph generation process in Networkx connects the edges by common nodes,in the case of TIGER/Line dataset the nodes are represented by the coordinates.  If the end coordinates of two neighboring edges are identical, we can incude these edges in the same graph.  Any minor difference may result in keeping them in separate graphs, with the terminology in Networkx, subgraphs. By definition, an edge in one subggraph is not connected to an edge in another eventhough they may be only tens of meters apart. To illustrate this let's look at two plot where we have two subgraphs in one figure and replacement of these two subgraphs into one thru end coordinate truncation.
+![Two subgraphs](img/two_subs_all1200.png)
+
+![One subgraph](img/4_truncated_all1200.png)
+
+Truncation has to be applied carefully, to prevent alignment changes of the road sections. 
+
 
 ## Codes
 
