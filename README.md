@@ -1,11 +1,7 @@
 # Role of linestring modification in prevention of road network subgraphs
-Mehmet Kunt<sup>1</sup>,PhD
+Mehmet Kunt<sup>1</sup>,PhD, Jennifer Zuehlke<sup>2</sup>, Randy Machemehl<sup>2</sup>, Phd, PE
 
-Jennifer Zuehlke<sup>2</sup>
-
-Randy Machemehl<sup>2</sup>, Phd, PE
-
-<sup>1</sup>_Eastern Mediterranean University_, <sup>2</sup>_The University of Texas at Austin_
+<sup>1</sup>[Eastern Mediterranean University](https://www.emu.edu.tr/en), <sup>2</sup>[The University of Texas at Austin](https://www.utexas.edu/)
 
 This is a repository for purposes of presenting the SciPy2020 Poster at [SciPy2020](https://www.scipy2020.scipy.org). All the scheduled presentations can be viewed at [SciPy2020 Schedule](https://na.eventscloud.com/ehome/487022?&t=d2917a15274e1daf79d80a4253f01e7a).
 
@@ -27,13 +23,25 @@ The road network data is obtained from [TIGER/Line Shapefiles](https://www.censu
 ## Analysis
 
 Inital Networkx analysis of the road network data of all four counties is summarized in Table 1
+**Table-1 Networkx graph summary info for the four counties**
+|    | County     |   No_nodes |   No_edges |   Avg_degree |
+|---:|:-----------|-----------:|-----------:|-------------:|
+|  0 | Kimble     |       4284 |       3290 |       1.5359 |
+|  1 | Menard     |       1851 |       1388 |       1.4997 |
+|  2 | Schleicher |       4397 |       3989 |       1.8144 |
+|  3 | Sutton     |       6379 |       5887 |       1.8457 |
 
-|    |   FIPS | County     |   Nodes |   Edges |   Avg_degree |
-|---:|-------:|:-----------|-----------:|-----------:|-------------:|
-|  0 |  48267 | Kimble     |       4285 |       3290 |       1.5356 |
-|  1 |  48327 | Menard     |       1853 |       1388 |       1.4981 |
-|  2 |  48413 | Schleicher |       4397 |       3989 |       1.8144 |
-|  3 |  48435 | Sutton     |       6452 |       5891 |       1.8261 |
+The details for the number of subgraphs by the county are shown in Table 2
+
+**Table-2 Networkx subgraph analysis results for the four counties**
+|    | County     |   No_subs |   Nodes in sub0 |   % of nodes |
+|---:|:-----------|----------:|----------------:|-------------:|
+|  0 | Kimble     |      1205 |             119 |         2.78 |
+|  1 | Menard     |       554 |              91 |         4.92 |
+|  2 | Schleicher |       749 |             280 |         6.37 |
+|  3 | Sutton     |       986 |             332 |         5.2  |
+
+
 
 The graph generation process in Networkx connects the edges by common nodes,in the case of TIGER/Line dataset the nodes are represented by the coordinates.  If the end coordinates of two neighboring edges are identical, we can incude these edges in the same graph.  Any minor difference may result in keeping them in separate graphs, with the terminology in Networkx, subgraphs. By definition, an edge in one subggraph is not connected to an edge in another eventhough they may be only tens of meters apart. To illustrate this let's look at two plot where we have two subgraphs in one figure and replacement of these two subgraphs into one thru end coordinate truncation.
 ![Two subgraphs](img/two_subs_all1200.png)
