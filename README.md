@@ -24,22 +24,21 @@ The road network data is obtained from [TIGER/Line Shapefiles](https://www.censu
 
 Inital Networkx analysis of the road network data of all four counties is summarized in Table 1
 **Table-1 Networkx graph summary info for the four counties**
-|    | County     |   No_nodes |   No_edges |   Avg_degree |
-|---:|:-----------|-----------:|-----------:|-------------:|
-|  0 | Kimble     |       4284 |       3290 |       1.5359 |
-|  1 | Menard     |       1851 |       1388 |       1.4997 |
-|  2 | Schleicher |       4397 |       3989 |       1.8144 |
-|  3 | Sutton     |       6379 |       5887 |       1.8457 |
-
+| County     |   No_nodes |   No_edges |   Avg_degree |
+|:-----------|-----------:|-----------:|-------------:|
+| Kimble     |       4284 |       3290 |       1.5359 |
+| Menard     |       1851 |       1388 |       1.4997 |
+| Schleicher |       4397 |       3989 |       1.8144 |
+| Sutton     |       6379 |       5887 |       1.8457 |
 The details for the number of subgraphs by the county are shown in Table 2
 
 **Table-2 Networkx subgraph analysis results for the four counties**
-|    | County     |   No_subs |   Nodes in sub0 |   % of nodes |
-|---:|:-----------|----------:|----------------:|-------------:|
-|  0 | Kimble     |      1205 |             119 |         2.78 |
-|  1 | Menard     |       554 |              91 |         4.92 |
-|  2 | Schleicher |       749 |             280 |         6.37 |
-|  3 | Sutton     |       986 |             332 |         5.2  |
+| County     |   No_subs |   Nodes in sub0 |   % of nodes |
+|:-----------|----------:|----------------:|-------------:|
+| Kimble     |      1205 |             119 |         2.78 |
+| Menard     |       554 |              91 |         4.92 |
+| Schleicher |       749 |             280 |         6.37 |
+| Sutton     |       986 |             332 |         5.2  |
 
 
 
