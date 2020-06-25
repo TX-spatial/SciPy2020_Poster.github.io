@@ -28,7 +28,7 @@ The road network data is obtained from [TIGER/Line Shapefiles](https://www.censu
 
 Inital Networkx analysis of the road network data of all four counties is summarized in Table 1
 
-|    |   FIPS | County     |   No_nodes |   No_edges |   Avg_degree |
+|    |   FIPS | County     |   Nodes |   Edges |   Avg_degree |
 |---:|-------:|:-----------|-----------:|-----------:|-------------:|
 |  0 |  48267 | Kimble     |       4285 |       3290 |       1.5356 |
 |  1 |  48327 | Menard     |       1853 |       1388 |       1.4981 |
