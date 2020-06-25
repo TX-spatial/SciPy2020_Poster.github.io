@@ -30,6 +30,7 @@ Inital Networkx analysis of the road network data of all four counties is summar
 | Menard     |       1851 |       1388 |       1.4997 |
 | Schleicher |       4397 |       3989 |       1.8144 |
 | Sutton     |       6379 |       5887 |       1.8457 |
+
 The details for the number of subgraphs by the county are shown in Table 2
 
 **Table-2 Networkx subgraph analysis results for the four counties**
