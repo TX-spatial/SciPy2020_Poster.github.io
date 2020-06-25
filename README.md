@@ -26,6 +26,7 @@ The road network data is obtained from [TIGER/Line Shapefiles](https://www.censu
 ## Analysis
 
 Inital Networkx analysis of the road network data of all four counties is summarized in Table 1
+
 **Table-1 Networkx graph summary info for the four counties**
 | County     |   No of nodes |   No of edges |   Avgerage degree |
 |:-----------|--------------:|--------------:|------------------:|
@@ -53,7 +54,7 @@ The details for the number of subgraphs by the county are shown in Table 2
 | Schleicher |             2639 |         0.647 | 1.531 |
 | Sutton     |             3265 |         0.54  | 1.353 |
 
-**Table-4 Top five road names with number of linestrings in decending order for the Kimble county**
+**Table-4 Top five road names with number of linestrings in decending order for the Kimble County**
 | Road Name     |   No of Linestrings |
 |:--------------|--------------------:|
 | I10 Svc Rd    |                  12 |
@@ -62,6 +63,15 @@ The details for the number of subgraphs by the county are shown in Table 2
 | Kc 130        |                   6 |
 | US Hwy 83     |                   6 |
 
+**Table-5 The details of linestrings assigned to Kc130 road in the Kimble County**
+|   index |      LINEARID |   Length (miles) |
+|--------:|--------------:|-----------------:|
+|     566 | 1103690726563 |       1.70988    |
+|     973 | 1103690726562 |       1.5133     |
+|    2637 | 1103690726560 |       0.0954167  |
+|    3039 | 1103671563060 |       0.0845677  |
+|    3044 | 1103690726561 |       0.00871457 |
+|    3045 | 1103671546765 |       0.00834386 |
 
 
 The graph generation process in Networkx connects the edges by common nodes,in the case of TIGER/Line dataset the nodes are represented by the coordinates.  If the end coordinates of two neighboring edges are identical, we can incude these edges in the same graph.  Any minor difference may result in keeping them in separate graphs, with the terminology in Networkx, subgraphs. By definition, an edge in one subggraph is not connected to an edge in another eventhough they may be only tens of meters apart. To illustrate this let's look at two plot where we have two subgraphs in one figure and replacement of these two subgraphs into one thru end coordinate truncation.
