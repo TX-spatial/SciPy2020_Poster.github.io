@@ -45,6 +45,22 @@ The details for the number of subgraphs by the county are shown in Table 2
 | Schleicher |          749 |             280 |         6.37 |
 | Sutton     |          986 |             332 |         5.2  |
 
+**Table-3 Mean and standard deviation of the linestrings for the four counties**
+| County     |   Length (miles) |   Mean Length |    sd |
+|:-----------|-----------------:|--------------:|------:|
+| Kimble     |             2413 |         0.712 | 1.65  |
+| Menard     |             1289 |         0.906 | 1.688 |
+| Schleicher |             2639 |         0.647 | 1.531 |
+| Sutton     |             3265 |         0.54  | 1.353 |
+
+**Table-4 Top five road names with number of linestrings in decending order for the Kimble county**
+| Road Name     |   No of Linestrings |
+|:--------------|--------------------:|
+| I10 Svc Rd    |                  12 |
+| Ranch Rd 1674 |                  10 |
+| Lopez Ln      |                   6 |
+| Kc 130        |                   6 |
+| US Hwy 83     |                   6 |
 
 
 
