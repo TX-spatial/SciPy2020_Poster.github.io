@@ -5,7 +5,7 @@ Jennifer Zuehlke<sup>2</sup>
 
 Randy Machemehl<sup>2</sup>, Phd, PE
 
-<sup>1</sup>Eastern Mediterranean University,<sup>2</sup>The University of Texas at Austin
+<sup>1</sup>_Eastern Mediterranean University_, <sup>2</sup>_The University of Texas at Austin_
 
 This is a repository for purposes of presenting the SciPy2020 Poster at [SciPy2020](https://www.scipy2020.scipy.org). All the scheduled presentations can be viewed at [SciPy2020 Schedule](https://na.eventscloud.com/ehome/487022?&t=d2917a15274e1daf79d80a4253f01e7a).
 
