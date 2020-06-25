@@ -21,7 +21,7 @@ This study is aimed to develop an algorithm entirely in Jupyter notebooks for pr
 
 ## Data
 
-The road network data is obtained from [TIGER/Line Shapefiles](https://www.census.gov/cgi-bin/geo/shapefiles/index.php?year=2019&layergroup=Roads) for the selected counties of the state of Texas. The data sets can be also fetched directly from the [Census FTP](https://www2.census.gov/geo/tiger/TIGER2019/ROADS/) by using the [county FIPS number](https://tx.postcodebase.com/state_county). If you prefer to fetch multiple county road datasets you may use [census_fetcher.py](https://gist.github.com/flibbertigibbet/8092460) by Kathryn Killebrew. In this study we decided to use TIGER/Line datasets instead of other open source data such as [OpenStreetMap](https://download.geofabrik.de/index.html) due to better rural area coverage provided by the former source. While volunteers work on 
+The road network data is obtained from [TIGER/Line Shapefiles](https://www.census.gov/cgi-bin/geo/shapefiles/index.php?year=2019&layergroup=Roads) for the selected counties of the state of Texas. The data sets can be also fetched directly from the [Census FTP](https://www2.census.gov/geo/tiger/TIGER2019/ROADS/) by using the [county FIPS number](https://tx.postcodebase.com/state_county). If you prefer to fetch multiple county road datasets you may use [census_fetcher.py](https://gist.github.com/flibbertigibbet/8092460) by Kathryn Killebrew. In this study we decided to use TIGER/Line datasets instead of other open source data such as [OpenStreetMap](https://download.geofabrik.de/index.html) due to better rural area coverage provided by the former source.
 
 ## Analysis
 
@@ -54,6 +54,8 @@ The details for the number of subgraphs by the county are shown in Table 2
 | Schleicher |             2639 |         0.647 | 1.531 |
 | Sutton     |             3265 |         0.54  | 1.353 |
 
+![A-Kimble](img/A-Kimble.png)
+
 **Table-4 Top five road names with number of linestrings in decending order for the Kimble County**
 | Road Name     |   No of Linestrings |
 |:--------------|--------------------:|
@@ -62,6 +64,8 @@ The details for the number of subgraphs by the county are shown in Table 2
 | Lopez Ln      |                   6 |
 | Kc 130        |                   6 |
 | US Hwy 83     |                   6 |
+
+![B-Kimble](img/B-Kimblemulti.png)
 
 **Table-5 The details of linestrings assigned to Kc 130 road in the Kimble County**
 |   index |      LINEARID |   Length (miles) |
@@ -73,6 +77,8 @@ The details for the number of subgraphs by the county are shown in Table 2
 |    3044 | 1103690726561 |       0.00871457 |
 |    3045 | 1103671546765 |       0.00834386 |
 
+![Before](img/before_Kc130.png)
+
 ```python
 import itertools
 num = 6 # No of linestrings in Kc 130
@@ -82,6 +88,15 @@ lst = (itertools.combinations(x, 2))
 print (*lst)
 (0, 1) (0, 2) (0, 3) (0, 4) (0, 5) (1, 2) (1, 3) (1, 4) (1, 5) (2, 3) (2, 4) (2, 5) (3, 4) (3, 5) (4, 5)
 ```
+
+|   index |      LINEARID |   Length (miles) |
+|--------:|--------------:|-----------------:|
+|     566 | 1103690726563 |       1.70988    |
+|     973 | 1103690726562 |       1.5133     |
+|    3039 | 1103671563060 |       0.0845677  |
+|    3045 | 1103671546765 |       0.00834386 |
+
+![After](img/after_Kc130.png)
 
 The graph generation process in Networkx connects the edges by common nodes,in the case of TIGER/Line dataset the nodes are represented by the coordinates.  If the end coordinates of two neighboring edges are identical, we can incude these edges in the same graph.  Any minor difference may result in keeping them in separate graphs, with the terminology in Networkx, subgraphs. By definition, an edge in one subggraph is not connected to an edge in another eventhough they may be only tens of meters apart. To illustrate this let's look at two plot where we have two subgraphs in one figure and replacement of these two subgraphs into one thru end coordinate truncation.
 ![Two subgraphs](img/two_subs_all1200.png)
@@ -118,8 +133,6 @@ Sample table
 
 
 
-#### Maps of the Kimble County
 
-![A-Kimble](img/A-Kimble.png)
 
-![B-Kimble](img/B-Kimblemulti.png)
+
