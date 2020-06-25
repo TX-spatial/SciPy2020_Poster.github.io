@@ -1,5 +1,5 @@
 # Role of linestring modification in prevention of road network subgraphs
-Mehmet Kunt<sup>1</sup>,PhD, Jennifer Zuehlke<sup>2</sup>, Randy Machemehl<sup>2</sup>, Phd, PE
+Mehmet Kunt<sup>1</sup>,PhD, Jennifer Zuehlke<sup>2</sup>, Randy Machemehl<sup>2</sup>, PhD, PE
 
 <sup>1</sup>[Eastern Mediterranean University](https://www.emu.edu.tr/en), <sup>2</sup>[The University of Texas at Austin](https://www.utexas.edu/)
 
@@ -12,6 +12,9 @@ This is a repository for purposes of presenting the SciPy2020 Poster at [SciPy20
 
 ## Summary
 In this study, we used coordinate truncation in TIGER/Line datasets for roads to prevent the formation of subgraphs to ensure a connected graph for network analysis. The method consists of writing code to perform truncation of end coordinates, segmentation of linestrings at the intersection points, and identification of the original linestring to the segments. Overall, the results show improved network connectivity and better performance in finding shortest paths with Networkx. Part of the road network in the state of Texas is being used to demonstrate both the effect of multiple subgraphs and the improvement comes with the proposed approach.
+
+## Introduction
+The need for having a road network in rural areas has multiple reasons including but not limited to finding shortest paths for delivering goods and transporting people to a single destination or multiple destinations.  Regardless of the method sought in network analysis (shortest path or travelling salesman problem), purpose of the trip (water delivery between water wells and oil wells, delivering COVID-19 kits to people in rural areas) a complete network is desired.
 
 ## Objective
 This study is aimed to develop an algorithm entirely in Jupyter notebooks for pre-processing TIGER/Line dataset to increase network completeness through coordinate truncation and proper segmentation of linestrings.  The developed approach is expected to prevent multiple subgraph formation for a given road network and allow shortest path analysis.  
