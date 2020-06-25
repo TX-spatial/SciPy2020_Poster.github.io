@@ -63,7 +63,7 @@ The details for the number of subgraphs by the county are shown in Table 2
 | Kc 130        |                   6 |
 | US Hwy 83     |                   6 |
 
-**Table-5 The details of linestrings assigned to Kc130 road in the Kimble County**
+**Table-5 The details of linestrings assigned to Kc 130 road in the Kimble County**
 |   index |      LINEARID |   Length (miles) |
 |--------:|--------------:|-----------------:|
 |     566 | 1103690726563 |       1.70988    |
@@ -73,6 +73,15 @@ The details for the number of subgraphs by the county are shown in Table 2
 |    3044 | 1103690726561 |       0.00871457 |
 |    3045 | 1103671546765 |       0.00834386 |
 
+```python
+import itertools
+num = 6 # No of linestrings in Kc 130
+x = np.linspace(0,num-1,num, dtype=int)
+# We need pairs of the combinations
+lst = (itertools.combinations(x, 2))
+print (*lst)
+(0, 1) (0, 2) (0, 3) (0, 4) (0, 5) (1, 2) (1, 3) (1, 4) (1, 5) (2, 3) (2, 4) (2, 5) (3, 4) (3, 5) (4, 5)
+```
 
 The graph generation process in Networkx connects the edges by common nodes,in the case of TIGER/Line dataset the nodes are represented by the coordinates.  If the end coordinates of two neighboring edges are identical, we can incude these edges in the same graph.  Any minor difference may result in keeping them in separate graphs, with the terminology in Networkx, subgraphs. By definition, an edge in one subggraph is not connected to an edge in another eventhough they may be only tens of meters apart. To illustrate this let's look at two plot where we have two subgraphs in one figure and replacement of these two subgraphs into one thru end coordinate truncation.
 ![Two subgraphs](img/two_subs_all1200.png)
