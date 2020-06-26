@@ -5,7 +5,7 @@ Several steps form the methodology
   1. Obtaining the network structure (# of subgraphs)
   1. Existence of tiny linestrings
   2. Existence of parallel linestrings
-* Pre-processing of to mitigate above problems
+* Pre-processing to mitigate above problems
   1. Removal of parallel linestrings
   2. Melding several linestrings of roads by employing itertools and Networkx
 * Finding the crossing points of each road
