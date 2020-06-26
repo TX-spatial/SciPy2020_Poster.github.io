@@ -5,4 +5,4 @@ The road network data is obtained from [TIGER/Line Shapefiles](https://www.censu
 Instead of other open source data such as [OpenStreetMap](https://download.geofabrik.de/index.html), we decided to use TIGER/Line datasets due to better rural area coverage provided in this study. Therefore, a larger area of coverage in spatial information allowed for more details into the infrastructure available. 
 
 
-[Back to Poster Navigation Board](./poster_nav.md#Outline)
+[Back to Poster Navigation Board](./README.md#Outline)
