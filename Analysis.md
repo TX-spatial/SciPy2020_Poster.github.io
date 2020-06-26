@@ -12,7 +12,7 @@ Inital Networkx analysis of the road network data of all four counties is summar
 | Sutton     |          6379 |          5887 |            1.8457 |
 
 
-The details for the number of subgraphs by the county are shown in Table 2
+The details for the number of subgraphs by the county are shown in Table 2. When we look at all the counties used in the analysis all of them have a very low node percentage in the largest subgraph, *sub0*.
 
 **Table-2 Networkx subgraph analysis results for the four counties**
 | County     |   No of subs |   Nodes in sub0 |   % of nodes |
@@ -39,6 +39,8 @@ The road network of Kimble County is depicted in Figure 1
 **Figure 1 The road network of Kimble County**
 
 ### Multiple Linestrings
+Getting the sorted value count of the road names (FULLNAME in TIGER/Line) resulted in a descending list of frequency as shown in Table-4. Among these top five roads we picked up Kc 130, County Road 130, Kimble County. As can be seen in Figure 2 the multilines for roads spread out.
+
 **Table-4 Top five road names with number of linestrings in decending order for the Kimble County**
 | Road Name     |   No of Linestrings |
 |:--------------|--------------------:|
@@ -49,6 +51,9 @@ The road network of Kimble County is depicted in Figure 1
 | US Hwy 83     |                   6 |
 
 ![B-Kimble](img/B-Kimblemulti.png)
+**Figure 2 The roads with multiple linestrings overlaid on road network of Kimble County**
+
+Once the road name is decided, a dataframe subset gave the information on these six linestrings as detailed in Table 5. A close inspection of the map containing these six linestrings indicate parallel lines (Figure 3) which should picked up within an algorithm and removed based on a suitable criterion.
 
 **Table-5 The details of linestrings assigned to Kc 130 road in the Kimble County**
 |   index |      LINEARID |   Length (miles) |
@@ -61,8 +66,11 @@ The road network of Kimble County is depicted in Figure 1
 |    3045 | 1103671546765 |       0.00834386 |
 
 ![Before](img/before_Kc130.png)
+**Figure 3 Parallel linestrings of Kc 130 road in Kimble County**
 
 ### Analyzing linestrings to obtain single linestring
+Finding and removing the parallel linestrings require checking of pairs of linestring without repetition.  For this purpose we benefitted from *itertools.combination()* function. Based on the analysis two pairs of parallel linestrings were identified and automatically one from each case is dropped. The updated list of linestrings are shown in Table 6 and the map formed by these is shown in Figure 4.
+
 ```python
 import itertools
 num = 6 # No of linestrings in Kc 130
@@ -80,12 +88,9 @@ print (*lst)
 |    3039 | 1103671563060 |       0.0845677  |
 |    3045 | 1103671546765 |       0.00834386 |
 
-![After](img/after_Kc130.png)
-**Originalsize**
 
 ![After](img/after_Kc130_75.png)
-**75 dpi**
-
+**Figure 4 After removing the parallel linestrings of Kc 130 road in Kimble County**
 
 The remaining four linestrings should be checked to find the order of melding them.  For this reason the _itertools_ function of Python is used again to generate the new combinations.
 
@@ -115,6 +120,7 @@ The script checking the _intersection_ of linestrings gave us a list of pairs wh
 |             3041 |                   |    30.3809 |    -99.9071 |
 
 
+## Truncation
 The graph generation process in Networkx connects the edges by common nodes,in the case of TIGER/Line dataset the nodes are represented by the coordinates.  If the end coordinates of two neighboring edges are identical, we can incude these edges in the same graph.  Any minor difference may result in keeping them in separate graphs, with the terminology in Networkx, subgraphs. By definition, an edge in one subggraph is not connected to an edge in another eventhough they may be only tens of meters apart. To illustrate this let's look at two plot where we have two subgraphs in one figure and replacement of these two subgraphs into one thru end coordinate truncation.
 ![Two subgraphs](img/two_subs_all1200.png)
 
