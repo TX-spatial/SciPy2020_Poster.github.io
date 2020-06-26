@@ -14,7 +14,6 @@ Several steps form the methodology
   1. Undershoot
   2. Overshoot
 * Applying trucation (3 decimal digits) to end points obtained in the previous step
-* Saving the road network in shp format
 * Using Networkx to generate the graph and apply shortest path
 
 
