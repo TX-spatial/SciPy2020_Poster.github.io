@@ -97,6 +97,13 @@ print (*lst)
 |    3045 | 1103671546765 |       0.00834386 |
 
 ![After](img/after_Kc130.png)
+**Originalsize**
+
+![After](img/after_Kc130_75.png)
+**75 dpi**
+
+![After](img/after_Kc130_50.png)
+**50 dpi**
 
 The remaining four linestrings should be checked to find the order of melding them.  For this reason the _itertools_ function of Python is used again to generate the new combinations
 
