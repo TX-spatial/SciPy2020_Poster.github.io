@@ -1,11 +1,15 @@
 ## Discussion
 
-In this study a methodology is being proposed for automating TIGER/Line road data to generate graphs for route analysis.  There were multiple issues which prevented the formation of a complete network from the original data.  Minor differences in the coordinates caused the formation of many subgraphs as we observed in Table 2 for all of the counties considered in this study. The original TIGER/Line datasets contained parallel linestrings and multiple sections of a roadway which were causing problems in graph formation and in the use of truncation.  The rounding of the coordinates to five decimal digits worked well as the three decimal digit truncation at selected coordinates helped to improve the graph.
+Automating TIGER/Line road data involves generating graphs for route analysis.  In the beginning, formation of a complete network from the original data was limited due to   1. Minor differences in the coordinates amongst points of interest (POIs),   2. Original TIGER/Line datasets containing parallel linestrings,   3. Multiple sections of a roadway not being truncated to the nearest decimal. 
+
+[Solution: Truncating to the third decimal place (i.e. thousandths place) works well for easy snapping to the nearest point, but refrains from acknowledging the true infrastructures framework given that we are working with roadways.  Truncating to the fifth decimal place (i.e. hundred thousandths place) allows for connection while leaving intact most of the framework already driven spatially into the dataset.]
 
 
 
 ## Conclusion
-In this study an algorithm is developed with the aim of solving the multiple subgraph existence problem in *Networkx*. The approach is developed to address the needs of the agencies such as Texas Department of Transportation (TxDOT) such as providing proper ID for the segments so relevant attribute values can be assigned. 
+In this study an algorithm is developed with the aim of solving the multiple subgraph existence problem in *Networkx*. The approach is developed to address the needs of the agencies such as Texas Department of Transportation (TxDOT) such as providing proper ID for the segments so relevant attribute values can be assigned.
+
+The future work coming from this effort would reflect on putting any roadway network to the test and examining the process by which correcting linestring information would prove to help build route paths for origin-destination related shortest-path calculations.  
 
 
 
