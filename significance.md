@@ -8,4 +8,5 @@ This study is aimed to develop an algorithm entirely in Jupyter notebooks for pr
 
 
 
-[Back to Poster Navigation Board](./poster_nav.md#Outline)
+[Back to Poster Navigation Board](./README.md#Outline)
+
