@@ -1,5 +1,6 @@
 ## Analysis
 
+### Subgraphs
 Inital Networkx analysis of the road network data of all four counties is summarized in Table 1
 
 **Table-1 Networkx graph summary info for the four counties**
@@ -21,6 +22,7 @@ The details for the number of subgraphs by the county are shown in Table 2
 | Schleicher |          749 |             280 |         6.37 |
 | Sutton     |          986 |             332 |         5.2  |
 
+### Statistics
 **Table-3 Mean and standard deviation of the linestrings for the four counties**
 | County     |   Length (miles) |   Mean Length |    sd |
 |:-----------|-----------------:|--------------:|------:|
@@ -31,6 +33,7 @@ The details for the number of subgraphs by the county are shown in Table 2
 
 ![A-Kimble](img/A-Kimble.png)
 
+### Multiple Linestrings
 **Table-4 Top five road names with number of linestrings in decending order for the Kimble County**
 | Road Name     |   No of Linestrings |
 |:--------------|--------------------:|
@@ -54,6 +57,7 @@ The details for the number of subgraphs by the county are shown in Table 2
 
 ![Before](img/before_Kc130.png)
 
+### Analyzing linestrings to obtain single linestring
 ```python
 import itertools
 num = 6 # No of linestrings in Kc 130
