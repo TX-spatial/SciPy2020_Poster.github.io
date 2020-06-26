@@ -13,7 +13,7 @@ In this study, we used coordinate truncation in TIGER/Line datasets for roads to
 
 | <center>Poster</center>           | <center>Navigation</center>   | <center>Board</center>                              |
 |:----------------------------------|:------------------------------|:----------------------------------------------------|
-| [Significance](./significance.md) |    | [Discussion](./Discussion&Conclusion.md#Discussion) |
-| [Data](./Data.md)                 | [Analysis](./Analysis.md)     | [Conclusion](./Discussion&Conclusion.md#Conclusion) |
-| [Methodology](./Methodology.md)   |      | [Tools and Contacts](./contacts.md)                 |
+| [Significance](./significance.md#Significance) |    | [Discussion](./Discussion&Conclusion.md#Discussion) |
+| [Data](./Data.md#Data)                 | [Analysis](./Analysis.md#Analysis)     | [Conclusion](./Discussion&Conclusion.md#Conclusion) |
+| [Methodology](./Methodology.md#Methodology)   |      | [Tools and Contacts](./contacts.md#Tools)                 |
 
