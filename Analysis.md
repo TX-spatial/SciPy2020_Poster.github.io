@@ -67,7 +67,7 @@ lst = (itertools.combinations(x, 2))
 print (*lst)
 (0, 1) (0, 2) (0, 3) (0, 4) (0, 5) (1, 2) (1, 3) (1, 4) (1, 5) (2, 3) (2, 4) (2, 5) (3, 4) (3, 5) (4, 5)
 ```
-
+**Table-6 The list of linestrings after the removal of parallel ones
 |   index |      LINEARID |   Length (miles) |
 |--------:|--------------:|-----------------:|
 |     566 | 1103690726563 |       1.70988    |
@@ -81,8 +81,6 @@ print (*lst)
 ![After](img/after_Kc130_75.png)
 **75 dpi**
 
-![After](img/after_Kc130_50.png)
-**50 dpi**
 
 The remaining four linestrings should be checked to find the order of melding them.  For this reason the _itertools_ function of Python is used again to generate the new combinations.
 
@@ -96,6 +94,21 @@ print (*lst)
 (0, 1) (0, 2) (0, 3) (1, 2) (1, 3) (2, 3)
 ```
 The script checking the _intersection_ of linestrings gave us a list of pairs where the snapping should be done in order to produce a single linestring out of these pairs.  The row numbers are given as [1, 4, 5] which are (0, 2), (1, 3) and (2, 3). A simple approach is followed in getting this order automatically.  We benefitted from the graph formation in Networkx, it can give us the order of these linestrings by locating the node numbers with single occurence at two ends of the graph. When a shortest path node list is asked, it provides the exact linestring order that we needed.  
+
+### Applying the crossing point script
+
+**Table-7 Crossing points along the Kc 130 linestring** 
+|   Cross Rd Index | Cross Rd Name     |   Latitude |   Longitude |
+|-----------------:|:------------------|-----------:|------------:|
+|              158 | Co Rd 130X        |    30.3925 |    -99.9385 |
+|              571 | Weisenburg Rd     |    30.3925 |    -99.9385 |
+|              982 |                   |    30.3912 |    -99.9297 |
+|             2195 | US Hwy 377        |    30.3834 |    -99.8906 |
+|             2202 | Oasis Pipeline Rd |    30.3826 |    -99.8967 |
+|             2626 |                   |    30.3903 |    -99.9262 |
+|             3040 |                   |    30.3809 |    -99.9022 |
+|             3041 |                   |    30.3809 |    -99.9071 |
+
 
 The graph generation process in Networkx connects the edges by common nodes,in the case of TIGER/Line dataset the nodes are represented by the coordinates.  If the end coordinates of two neighboring edges are identical, we can incude these edges in the same graph.  Any minor difference may result in keeping them in separate graphs, with the terminology in Networkx, subgraphs. By definition, an edge in one subggraph is not connected to an edge in another eventhough they may be only tens of meters apart. To illustrate this let's look at two plot where we have two subgraphs in one figure and replacement of these two subgraphs into one thru end coordinate truncation.
 ![Two subgraphs](img/two_subs_all1200.png)
