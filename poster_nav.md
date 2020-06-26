@@ -2,6 +2,5 @@
 |:----------------------------------|:------------------------------|:----------------------------------------------------|
 | [Significance](./significance.md) | [Analysis](./Analysis.md)     | [Discussion](./Discussion&Conclusion.md#Discussion) |
 | [Data](./Data.md)                 | [Analysis](./Analysis.md)     | [Conclusion](./Discussion&Conclusion.md#Conclusion) |
-| [Methodology](./Methodology.md)   | [Analysis](./Analysis.md)     | [Tools&Contacts](./contacts.md)                     |
-
+| [Methodology](./Methodology.md)   | [Analysis](./Analysis.md)     | [Tools and Contacts](./contacts.md)                 |
 
