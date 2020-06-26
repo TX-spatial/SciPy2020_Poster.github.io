@@ -1,7 +1,7 @@
 ## Analysis
 
 ### Subgraphs
-Inital Networkx analysis of the road network data of all four counties is summarized in Table 1
+Inital Networkx analysis of the road network data of all four counties is summarized in Table 1. As given the table the initial average network degree is low due to the existence of subgraphs.
 
 **Table-1 Networkx graph summary info for the four counties**
 | County     |   No of nodes |   No of edges |   Average degree |
@@ -23,6 +23,8 @@ The details for the number of subgraphs by the county are shown in Table 2
 | Sutton     |          986 |             332 |         5.2  |
 
 ### Statistics
+The ratio of standard deviation to mean linestring length indicates existence of very tiny linestrings.
+
 **Table-3 Mean and standard deviation of the linestrings for the four counties**
 | County     |   Length (miles) |   Mean Length |    sd |
 |:-----------|-----------------:|--------------:|------:|
@@ -31,7 +33,10 @@ The details for the number of subgraphs by the county are shown in Table 2
 | Schleicher |             2639 |         0.647 | 1.531 |
 | Sutton     |             3265 |         0.54  | 1.353 |
 
+The road network of Kimble County is depicted in Figure 1
+
 ![A-Kimble](img/A-Kimble.png)
+**Figure 1 The road network of Kimble County**
 
 ### Multiple Linestrings
 **Table-4 Top five road names with number of linestrings in decending order for the Kimble County**
