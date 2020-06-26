@@ -80,7 +80,7 @@ lst = (itertools.combinations(x, 2))
 print (*lst)
 (0, 1) (0, 2) (0, 3) (0, 4) (0, 5) (1, 2) (1, 3) (1, 4) (1, 5) (2, 3) (2, 4) (2, 5) (3, 4) (3, 5) (4, 5)
 ```
-**Table-6 The list of linestrings after the removal of parallel ones
+**Table-6 The list of linestrings after the removal of parallel ones**
 |   index |      LINEARID |   Length (miles) |
 |--------:|--------------:|-----------------:|
 |     566 | 1103690726563 |       1.70988    |
@@ -120,11 +120,15 @@ The script checking the _intersection_ of linestrings gave us a list of pairs wh
 |             3041 |                   |    30.3809 |    -99.9071 |
 
 
+
 ## Truncation
-The graph generation process in Networkx connects the edges by common nodes,in the case of TIGER/Line dataset the nodes are represented by the coordinates.  If the end coordinates of two neighboring edges are identical, we can incude these edges in the same graph.  Any minor difference may result in keeping them in separate graphs, with the terminology in Networkx, subgraphs. By definition, an edge in one subggraph is not connected to an edge in another eventhough they may be only tens of meters apart. To illustrate this let's look at two plot where we have two subgraphs in one figure and replacement of these two subgraphs into one thru end coordinate truncation.
+The graph generation process in Networkx connects the edges by common nodes,in the case of TIGER/Line dataset the nodes are represented by the coordinates.  If the end coordinates of two neighboring edges are identical, we can incude these edges in the same graph.  Any minor difference may result in keeping them in separate graphs, with the terminology in Networkx, subgraphs. By definition, an edge in one subggraph is not connected to an edge in another eventhough they may be only tens of meters apart. To illustrate this let's look at two plot where we have two subgraphs in Figure-5 and replacement of these two subgraphs into one thru end coordinate truncation done with three-digit truncation as depicted in Figure-6.
+
 ![Two subgraphs](img/two_subs_all1200.png)
+**Figure 5 Two subgraphs due to difference in end coordinates**
 
 ![One subgraph](img/4_truncated_all1200.png)
+**Figure 6 Converting two subgraphs into one by applying truncation**
 
 Truncation has to be applied carefully, to prevent alignment changes of the road sections. 
 
