@@ -22,4 +22,4 @@ Several steps form the methodology
 
 
 
-[Back to Poster Navigation Board](./poster_nav.md#Outline)
+[Back to Poster Navigation Board](./README.md#Outline)
