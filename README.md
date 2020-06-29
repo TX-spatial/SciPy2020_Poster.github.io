@@ -18,6 +18,4 @@ In this study, we used coordinate truncation in TIGER/Line datasets for roads to
 | [Methodology](./Methodology.md#Methodology)   |      | [Tools and Contacts](./contacts.md#Tools)                 |
 
 
-<div class="text-white bg-blue mb-2">
-  .text-white on .bg-blue
-</div>
+
