@@ -7,7 +7,7 @@ This is a repository for purposes of presenting the SciPy2020 Poster at [SciPy20
 
 
 ## Summary
-In this study, we used coordinate truncation in TIGER/Line datasets for roads to prevent the formation of subgraphs and to ensure a connected graph for network analysis. The method consists of writing a structured code to perform truncation of end coordinates, segmentation of linestrings at the intersection points, and identification of the original linestring to the segments. Overall, the results show improved network connectivity and better performance in finding shortest paths with Networkx. Part of the road network in the state of Texas is being used to demonstrate both the effect of multiple subgraphs and the improvement comes with the proposed approach.
+In this study, we used **coordinate truncation** in **TIGER/_Line_** datasets for roads to prevent the formation of subgraphs and to ensure a connected graph for network analysis. The method consists of **writing a structured code** to perform **_truncation of end coordinates_**, **_segmentation of linestrings at the intersection points_**, and **_identification of the original linestring to the segments_**. Overall, the results show improved network connectivity and better performance in finding shortest paths with Networkx. Part of the road network in the state of Texas is being used to demonstrate both the effect of multiple subgraphs and the improvement comes with the proposed approach.
 
 ## Outline
 
