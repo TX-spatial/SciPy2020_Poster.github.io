@@ -12,7 +12,7 @@ Inital Networkx analysis of the road network data of **all four counties** is su
 | Sutton     |          6379 |          5887 |            1.8457 |
 
 
-The details for the number of subgraphs by the county are shown in Table 2. When we look at all the counties used in the analysis, each of them have a **very low node percentage overall** in the largest subgraph, *sub0*.
+The details for the number of subgraphs by the county are shown in Table 2. When we look at all the counties used in the analysis, each of them have a **very low node percentage overall** compared to the largest subgraph, *sub0*.
 
 **Table-2 Networkx subgraph analysis results for the four counties**
 | County     |   No of subs |   Nodes in sub0 |   % of total nodes |
@@ -23,7 +23,7 @@ The details for the number of subgraphs by the county are shown in Table 2. When
 | Sutton     |          986 |             332 |         5.2  |
 
 ### Statistics
-The ratio of standard deviation to mean linestring length indicates existence of very tiny linestrings.
+The ratio of standard deviation to mean linestring length indicates **existence of very tiny linestrings**.
 
 **Table-3 Mean and standard deviation of the linestrings for the four counties**
 | County     |   Length (miles) |   Mean Length |    sd |
@@ -39,7 +39,7 @@ The road network of Kimble County is depicted in Figure 1
 **Figure 1 The road network of Kimble County**
 
 ### Multiple Linestrings
-Getting the sorted value count of the road names (FULLNAME in TIGER/Line) resulted in a descending list of frequency as shown in Table-4. Among these top five roads we picked up Kc 130 (County Road 130) with six linestrings, Kimble County. As can be seen in Figure 2 the multilines for roads spread out.
+Getting the sorted value count of the **road names (FULLNAME in TIGER/Line)** resulted in a descending list of frequency as shown in Table-4. Among these top five roads we picked up Kc 130 (County Road 130) with six linestrings, Kimble County. As can be seen in Figure 2 the multilines for **roads spread out**.
 
 **Table-4 Top five road names with number of linestrings in decending order for the Kimble County**
 | Road Name     |   No of Linestrings |
@@ -47,7 +47,7 @@ Getting the sorted value count of the road names (FULLNAME in TIGER/Line) result
 | I10 Svc Rd    |                  12 |
 | Ranch Rd 1674 |                  10 |
 | Lopez Ln      |                   6 |
-| **Kc 130**        |                   **6** |
+| **Kc 130**       |                  ** 6 **|
 | US Hwy 83     |                   6 |
 
 ![B-Kimble](img/B-Kimblemulti.png)
@@ -69,7 +69,7 @@ Once the road name is decided, a dataframe subset gave the information on these 
 **Figure 3 Parallel linestrings of Kc 130 road in Kimble County**
 
 ### Analyzing linestrings to obtain single linestring
-Finding and removing the parallel linestrings require checking of pairs of linestring without repetition.  For this purpose we benefitted from *itertools.combination()* function. Based on the analysis two pairs of parallel linestrings were identified and automatically one from each case is dropped. The updated list of linestrings are shown in Table 6 and the map formed by these is shown in Figure 4.
+Finding and removing the **parallel linestrings** require checking of pairs of linestring without repetition.  For this purpose we benefitted from *itertools.combination()* function. Based on the analysis two pairs of parallel linestrings were identified and automatically one from each case is dropped. The updated list of linestrings are shown in Table 6 and the map formed by these is shown in Figure 4.
 
 ```python
 import itertools
@@ -103,11 +103,11 @@ lst = (itertools.combinations(x, 2))
 print (*lst)
 (0, 1) (0, 2) (0, 3) (1, 2) (1, 3) (2, 3)
 ```
-The script checking the _intersection_ of linestrings gave us a list of pairs where the snapping should be done in order to produce a single linestring out of these pairs.  The row numbers are given as [1, 4, 5] which are (0, 2), (1, 3) and (2, 3). A simple approach is followed in getting this order automatically.  We benefitted from the graph formation in Networkx, it can give us the order of these linestrings by locating the node numbers with single occurence at two ends of the graph. When a shortest path node list is asked, it provides the exact linestring order that we needed.  
+The script checking the _intersection_ of linestrings gave us a list of pairs where the snapping should be done in order to **produce a single linestring** out of these pairs.  The row numbers are given as [1, 4, 5] which are (0, 2), (1, 3) and (2, 3). A simple approach is followed in getting this order automatically.  We benefitted from the graph formation in Networkx, it can give us the order of these linestrings by locating the node numbers with single occurence at two ends of the graph. When a **shortest path node list** is asked, it provides the exact linestring order that we needed.  
 
 ### Applying the crossing point script
-As seen in Table-7 some of the cross road names are missing because of the missing data in the original TIGER/Line dataset.
 
++ As seen in Table-7 some of the cross road names are missing because of the missing data in the original TIGER/Line dataset.
 **Table-7 Crossing points along the Kc 130 linestring** 
 |   Cross Rd Index | Cross Rd Name     |   Latitude |   Longitude |
 |-----------------:|:------------------|-----------:|------------:|
@@ -123,7 +123,7 @@ As seen in Table-7 some of the cross road names are missing because of the missi
 
 
 ## Truncation
-The graph generation process in Networkx connects the edges by common nodes,in the case of TIGER/Line dataset the nodes are represented by the coordinates.  If the end coordinates of two neighboring edges are identical, we can incude these edges in the same graph.  Any minor difference may result in keeping them in separate graphs, with the terminology in Networkx, subgraphs. By definition, an edge in one subggraph is not connected to an edge in another eventhough they may be only tens of meters apart. To illustrate this let's look at two plot where we have two subgraphs in Figure-5 and replacement of these two subgraphs into one thru end coordinate truncation done with three-digit truncation as depicted in Figure-6.
+The graph generation process in Networkx connects the **edges by common nodes**,in the case of TIGER/Line dataset the nodes are represented by the coordinates.  If the end coordinates of two **neighboring edges** are identical, we can incude these edges in the same graph.  Any minor difference may result in keeping them in separate graphs, with the terminology in Networkx, subgraphs. By definition, an edge in one subggraph is not connected to an edge in another eventhough they may be only tens of meters apart. To illustrate this let's look at two plot where we have two subgraphs in Figure-5 and replacement of these two subgraphs into one thru **end-coordinate truncation** done with three-digit truncation as depicted in Figure-6.
 
 ![Two subgraphs](img/two_subs_all1200.png)
 **Figure 5 Two subgraphs due to difference in end coordinates**
