@@ -13,9 +13,9 @@ In this study, we used **coordinate truncation** in **TIGER/_Line_** datasets fo
 
 | <center>POSTER</center>           | <center>NAVIGATION</center>   | <center>BOARD</center>                              |
 |:----------------------------------:|:------------------------------:|:----------------------------------------------------:|
-| [Significance](./significance.md#Significance) |    | [Discussion](./Discussion&Conclusion.md#Discussion) |
-| [Data](./Data.md#Data)                 | [Analysis](./Analysis.md#Analysis)     | [Conclusion](./Discussion&Conclusion.md#Conclusion) |
-| [Methodology](./Methodology.md#Methodology)   |      | [Tools](./tools.md#Tools)   
+| [SIGNIFICANCE](./significance.md#Significance) |    | [DISCUSSION](./Discussion&Conclusion.md#Discussion) |
+| [DATA](./Data.md#Data)                 | [ANALYSIS](./Analysis.md#Analysis)     | [CONCLUSION](./Discussion&Conclusion.md#Conclusion) |
+| [METHODOLOGY](./Methodology.md#Methodology)   |      | [TOOLS](./tools.md#Tools)   
 
 
 
