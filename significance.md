@@ -9,5 +9,6 @@ When the Networkx is applied to a TIGER/Line dataset for the rural counties in T
 
 ### Objective 
 This study is aimed to develop an algorithm entirely in Jupyter notebooks for pre-processing TIGER/Line datasets in order to increase network completeness through **removal of parallel linestrings**, **melding of linestrings** with the same roadname, **linestring segmentation at junctions** and **end-coordinate truncation** where undershoot or overshoot is observed.  The developed approach is expected to prevent multiple subgraph formation for any given road network and allow shortest path analysis along with a more detailed and complete set of paths. 
+
 [Back to Poster Navigation Board](./README.md#Outline)
 
