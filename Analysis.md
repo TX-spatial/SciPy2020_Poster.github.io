@@ -1,7 +1,7 @@
 ## Analysis
 
 ### Subgraphs
-Inital Networkx analysis of the road network data of **all four counties** is summarized in Table 1. As given the table the **initial average network degree** is **low** due to the existence of subgraphs.
+Inital Networkx analysis of the road network data of **all four counties** is summarized in Table 1. As given the table the **initial _average network degree_** is **low** due to the existence of subgraphs.
 
 **Table-1 Networkx graph summary info for the four counties**
 | County     |   No of nodes |   No of edges |   Average degree |
