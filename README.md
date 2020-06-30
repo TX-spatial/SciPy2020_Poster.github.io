@@ -12,7 +12,7 @@ In this study, we used **coordinate truncation** in **TIGER/_Line_** datasets fo
 ## Outline
 
 | <center>Poster</center>           | <center>Navigation</center>   | <center>Board</center>                              |
-|:----------------------------------:|:------------------------------:|:----------------------------------------------------|
+|:----------------------------------:|:------------------------------:|:----------------------------------------------------:|
 | [Significance](./significance.md#Significance) |    | [Discussion](./Discussion&Conclusion.md#Discussion) |
 | [Data](./Data.md#Data)                 | [Analysis](./Analysis.md#Analysis)     | [Conclusion](./Discussion&Conclusion.md#Conclusion) |
 | [Methodology](./Methodology.md#Methodology)   |      | [Tools](./tools.md#Tools)   
