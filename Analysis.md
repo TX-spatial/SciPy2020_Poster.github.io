@@ -103,7 +103,7 @@ lst = (itertools.combinations(x, 2))
 print (*lst)
 (0, 1) (0, 2) (0, 3) (1, 2) (1, 3) (2, 3)
 ```
-The script checking the _intersection_ of linestrings gave us a list of pairs where the snapping should be done in order to **produce a single linestring** out of these pairs.  The row numbers are given as [1, 4, 5] which are (0, 2), (1, 3) and (2, 3). A simple approach is followed in getting this order automatically.  We benefitted from the graph formation in Networkx, it can give us the order of these linestrings by locating the node numbers with single occurence at two ends of the graph. When a **shortest path node list** is asked, it provides the exact linestring order that we needed.  
+The script checking the **_intersection_** of linestrings gave us a **list of pairs** where the snapping should be done in order to **produce a single linestring** out of these pairs.  The row numbers are given as [1, 4, 5] which are (0, 2), (1, 3) and (2, 3). A simple approach is followed in getting this order automatically.  We benefitted from the **graph formation** in Networkx, it can give us the order of these linestrings by locating the node numbers with single occurence at two ends of the graph. When a **shortest path node list** is asked, it provides the exact linestring order that we needed.  
 
 ### Applying the crossing point script
 
