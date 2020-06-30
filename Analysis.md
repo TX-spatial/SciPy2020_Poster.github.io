@@ -12,7 +12,7 @@ Inital Networkx analysis of the road network data of **all four counties** is su
 | Sutton     |          6379 |          5887 |            1.8457 |
 
 
-The details for the number of subgraphs by the county are shown in Table 2. When we look at all the counties used in the analysis, each of them have a **very low node percentage overall** compared to the largest subgraph, *sub0*.
+The details for the number of subgraphs by the county are shown in Table 2. When we look at all the counties used in the analysis, each of them have a **very low node percentage overall** in the largest subgraph, *sub0*.
 
 **Table-2 Networkx subgraph analysis results for the four counties**
 | County     |   No of subs |   Nodes in sub0 |   % of total nodes |
@@ -39,7 +39,7 @@ The road network of Kimble County is depicted in Figure 1
 **Figure 1 The road network of Kimble County**
 
 ### Multiple Linestrings
-Getting the sorted value count of the road names (FULLNAME in TIGER/Line) resulted in a descending list of frequency as shown in Table-4. Among these top five roads we picked up Kc 130, County Road 130, Kimble County. As can be seen in Figure 2 the multilines for roads spread out.
+Getting the sorted value count of the road names (FULLNAME in TIGER/Line) resulted in a descending list of frequency as shown in Table-4. Among these top five roads we picked up Kc 130 (County Road 130) with six linestrings, Kimble County. As can be seen in Figure 2 the multilines for roads spread out.
 
 **Table-4 Top five road names with number of linestrings in decending order for the Kimble County**
 | Road Name     |   No of Linestrings |
@@ -47,13 +47,13 @@ Getting the sorted value count of the road names (FULLNAME in TIGER/Line) result
 | I10 Svc Rd    |                  12 |
 | Ranch Rd 1674 |                  10 |
 | Lopez Ln      |                   6 |
-| Kc 130        |                   6 |
+| **Kc 130**        |                   **6** |
 | US Hwy 83     |                   6 |
 
 ![B-Kimble](img/B-Kimblemulti.png)
 **Figure 2 The roads with multiple linestrings overlaid on road network of Kimble County**
 
-Once the road name is decided, a dataframe subset gave the information on these six linestrings as detailed in Table 5. A close inspection of the map containing these six linestrings indicate parallel lines (Figure 3) which should picked up within an algorithm and removed based on a suitable criterion.
+Once the road name is decided, a dataframe subset gave the information on these six linestrings as detailed in Table 5. A close inspection of the map containing these six linestrings indicate parallel lines (Figure 3) which should be picked up within an algorithm and removed based on a suitable criterion.
 
 **Table-5 The details of linestrings assigned to Kc 130 road in the Kimble County**
 |   index |      LINEARID |   Length (miles) |
@@ -106,6 +106,7 @@ print (*lst)
 The script checking the _intersection_ of linestrings gave us a list of pairs where the snapping should be done in order to produce a single linestring out of these pairs.  The row numbers are given as [1, 4, 5] which are (0, 2), (1, 3) and (2, 3). A simple approach is followed in getting this order automatically.  We benefitted from the graph formation in Networkx, it can give us the order of these linestrings by locating the node numbers with single occurence at two ends of the graph. When a shortest path node list is asked, it provides the exact linestring order that we needed.  
 
 ### Applying the crossing point script
+As seen in Table-7 some of the cross road names are missing because of the missing data in the original TIGER/Line dataset.
 
 **Table-7 Crossing points along the Kc 130 linestring** 
 |   Cross Rd Index | Cross Rd Name     |   Latitude |   Longitude |
