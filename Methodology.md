@@ -8,7 +8,7 @@ The issues mentioned in the [Significance](./significance.md#Significance) secti
 * Pre-processing to mitigate above problems
   1. Removal of parallel linestrings
   2. Melding several linestrings of roads by employing itertools and Networkx
-* Finding the crossing points of each road
+* Finding the crossing points or Point of interest (POIs) of each road 
 * Segmenting the linestring
 * Finding the end points where there exist
   1. Undershoot
