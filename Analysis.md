@@ -132,7 +132,7 @@ The graph generation process in Networkx connects the **edges by common nodes**,
 ![One subgraph](img/4_truncated_all1200.png)
 **Figure 6 Converting two subgraphs into one by applying truncation**
 
-Truncation has to be applied carefully, to prevent alignment changes of the road sections. 
+Truncation has to be applied carefully, to **_prevent alignment changes_** of the road sections. 
 
 
 
