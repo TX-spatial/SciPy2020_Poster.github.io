@@ -107,7 +107,8 @@ The script checking the _intersection_ of linestrings gave us a list of pairs wh
 
 ### Applying the crossing point script
 
-+ As seen in Table-7 some of the cross road names are missing because of the missing data in the original TIGER/Line dataset.
+As seen in Table-7 some of the cross road names are missing because of the missing data in the original TIGER/Line dataset.
+
 **Table-7 Crossing points along the Kc 130 linestring** 
 |   Cross Rd Index | Cross Rd Name     |   Latitude |   Longitude |
 |-----------------:|:------------------|-----------:|------------:|
