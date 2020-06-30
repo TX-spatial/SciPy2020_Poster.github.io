@@ -13,9 +13,9 @@ Using road names in the **_FULLNAME field_** of **TIGER/_Line_** data allowed th
 
 __1.__ Parallel linestrings were identified and dropped
 
-2. Remaining linestrings were ordered and meld
+__2.__ Remaining linestrings were ordered and meld
 
-3. Truncation (three decimal digits) was applied only to the end points where undershoot/overshoot were observed
+__3.__ Truncation (three decimal digits) was applied only to the end points where undershoot/overshoot were observed
 
 
 ## Conclusion
