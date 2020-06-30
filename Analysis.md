@@ -124,7 +124,7 @@ As seen in Table-7 some of the cross road names are missing because of the missi
 
 
 ## Truncation
-The graph generation process in Networkx connects the **edges by common nodes**,in the case of TIGER/Line dataset the nodes are represented by the coordinates.  If the end coordinates of two **neighboring edges** are identical, we can incude these edges in the same graph.  Any minor difference may result in keeping them in separate graphs, with the terminology in Networkx, subgraphs. By definition, an edge in one subggraph is not connected to an edge in another eventhough they may be only tens of meters apart. To illustrate this let's look at two plot where we have two subgraphs in Figure-5 and replacement of these two subgraphs into one thru **end-coordinate truncation** done with three-digit truncation as depicted in Figure-6.
+The graph generation process in Networkx connects the **edges by common nodes**,in the case of TIGER/Line dataset the nodes are represented by the coordinates.  If the end coordinates of two **neighboring edges** are identical, we can incude these edges in the same graph.  Any minor difference may result in keeping them in separate graphs, with the terminology in Networkx, subgraphs. By definition, an edge in one subgraph is not connected to an edge in another even though they may be only tens of meters apart. To illustrate this let's look at two plot where we have two subgraphs in Figure-5 and replacement of these two subgraphs into one thru **end-coordinate truncation** done with three-digit truncation as depicted in Figure-6.
 
 ![Two subgraphs](img/two_subs_all1200.png)
 **Figure 5 Two subgraphs due to difference in end coordinates**
