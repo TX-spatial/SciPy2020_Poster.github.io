@@ -39,7 +39,7 @@ The road network of Kimble County is depicted in Figure 1
 **Figure 1 The road network of Kimble County**
 
 ### Multiple Linestrings
-Getting the sorted value count of the **road names (FULLNAME in TIGER/Line)** resulted in a descending list of frequency as shown in Table-4. Among these top five roads we picked up Kc 130 (County Road 130) with six linestrings, Kimble County. As can be seen in Figure 2 the multilines for **roads spread out**.
+Getting the sorted value count of the **road names (FULLNAME in TIGER/Line)** resulted in a descending list of frequency as shown in Table-4. Among these top five roads we picked up Kc 130 (County Road 130) with six linestrings, Kimble County. As can be seen in Figure 2 the **_multilines_** for roads **spread out**.
 
 **Table-4 Top five road names with number of linestrings in decending order for the Kimble County**
 | Road Name     |   No of Linestrings |
@@ -69,7 +69,7 @@ Once the road name is decided, a dataframe subset gave the information on these 
 **Figure 3 Parallel linestrings of Kc 130 road in Kimble County**
 
 ### Analyzing linestrings to obtain single linestring
-Finding and removing the **parallel linestrings** require checking of pairs of linestring without repetition.  For this purpose we benefitted from *itertools.combination()* function. Based on the analysis two pairs of parallel linestrings were identified and automatically one from each case is dropped. The updated list of linestrings are shown in Table 6 and the map formed by these is shown in Figure 4.
+Finding and removing the **parallel linestrings** require checking of pairs of linestring without repetition.  For this purpose we benefitted from *itertools.combination()* function. Based on the analysis **_two pairs_** of **parallel linestrings** were identified and automatically one from each case is dropped. The updated list of linestrings are shown in Table 6 and the map formed by these is shown in Figure 4.
 
 ```python
 import itertools
@@ -124,7 +124,7 @@ As seen in Table-7 some of the cross road names are missing because of the missi
 
 
 ## Truncation
-The graph generation process in Networkx connects the **edges by common nodes**,in the case of TIGER/Line dataset the nodes are represented by the coordinates.  If the end coordinates of two **neighboring edges** are identical, we can incude these edges in the same graph.  Any minor difference may result in keeping them in separate graphs, with the terminology in Networkx, subgraphs. By definition, an edge in one subgraph is not connected to an edge in another even though they may be only tens of meters apart. To illustrate this let's look at two plot where we have two subgraphs in Figure-5 and replacement of these two subgraphs into one thru **end-coordinate truncation** done with three-digit truncation as depicted in Figure-6.
+The graph generation process in Networkx connects the **edges by common nodes**,in the case of TIGER/Line dataset the nodes are represented by the coordinates.  If the end coordinates of two **neighboring edges** are identical, we can incude these edges in the same graph.  Any minor difference may result in keeping them in separate graphs, with the terminology in Networkx, subgraphs. By definition, an edge in one subgraph is not connected to an edge in another even though they may be only **tens of meters** apart. To illustrate this let's look at two plot where we have two subgraphs in Figure-5 and replacement of these two subgraphs into one thru **end-coordinate truncation** done with three-digit truncation as depicted in Figure-6.
 
 ![Two subgraphs](img/two_subs_all1200.png)
 **Figure 5 Two subgraphs due to difference in end coordinates**
