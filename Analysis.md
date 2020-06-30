@@ -12,7 +12,7 @@ Inital Networkx analysis of the road network data of **all four counties** is su
 | Sutton     |          6379 |          5887 |            1.8457 |
 
 
-The details for the number of subgraphs by the county are shown in Table 2. When we look at all the counties used in the analysis, each of them have a **very low node percentage overall** compared to the largest subgraph, *sub0*.
+The details for the number of subgraphs by the county are shown in Table 2. When we look at all the counties used in the analysis, each of them have a **very _low node percentage_ overall** compared to the largest subgraph, *sub0*.
 
 **Table-2 Networkx subgraph analysis results for the four counties**
 | County     |   No of subs |   Nodes in sub0 |   % of total nodes |
