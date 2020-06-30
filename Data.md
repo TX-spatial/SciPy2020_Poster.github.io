@@ -4,7 +4,7 @@ In this study the road network data is obtained from [TIGER/Line Shapefiles](htt
 
 The data, originally set in shapefile (.shp) format, was converted into a dataframe with GeoPandas for further processing.  Part of the data for Kimble county road network is depicted in the following figure
 
-
+![Data_Frame](img/data_frame.png)
 
 Instead of using other open source data such as [OpenStreetMap](https://download.geofabrik.de/index.html), we decided to use **TIGER/Line datasets** due to **better rural area road network coverage**. Hence, a larger area of coverage in spatial information allowed for more details into the infrastructure available. 
 
