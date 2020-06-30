@@ -1,14 +1,14 @@
 ## Tools
 
 Primarily the following tools were used in this study.  The tables in the poster were prepared with *tabulate* function
-* Pandas
-* Geopandas
-* Shapely
-* Networkx
-* Matplotlib
-* Numpy
-* Itertools
-* Fiona
+* __Pandas__
+* __Geopandas__
+* __Shapely__
+* __Networkx__
+* __Matplotlib__
+* __Numpy__
+* __Itertools__
+* __Fiona__
 
 
 
