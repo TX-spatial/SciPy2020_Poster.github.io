@@ -11,11 +11,11 @@ Automating TIGER/Line road data involves **generating graphs** for **_route anal
 
 Using road names in the **_FULLNAME field_** of **TIGER/_Line_** data allowed the grouping of linestrings which permitted the following:
 
-**1.** Parallel linestrings were identified and dropped
+__1.__ Parallel linestrings were identified and dropped
 
-**2.** Remaining linestrings were ordered and meld
+2. Remaining linestrings were ordered and meld
 
-**3.** Truncation (three decimal digits) was applied only to the end points where undershoot/overshoot were observed
+3. Truncation (three decimal digits) was applied only to the end points where undershoot/overshoot were observed
 
 
 ## Conclusion
