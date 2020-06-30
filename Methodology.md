@@ -1,6 +1,6 @@
 ## Methodology
 
-Several steps form the methodology
+The issues mentioned in the [Significance](./README.md#Significance) section required a solution that will address them.  Accordingly, the following steps form the methodology:
 * Inspecting the TIGER/Line dataset
   1. Obtaining the network structure (# of subgraphs)
   1. Existence of tiny linestrings
